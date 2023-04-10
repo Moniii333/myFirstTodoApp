@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode TODO</title>
+    <link type = "text/css" rel="stylesheet" href="app.css">
+</head>
+<body> 
+     <div class="toggle-switch">
+       <label id="toggle-switch">
+            <input type="checkbox" id="theSwitch">
+            <span class="slider"></span>
+       </label>        
+     </div>
+     <h1>Today's Agenda!</h1>
+        <form id="save" for="saveTodos" action=""> 
+         <button for="save" class="saveTodos" type="button">Save!</button>
+        </form>
+
+        <form id="add-tasks" >
+            <input for="moreStuff" type="text" class="moreTasks" placeholder="More tasks? Write them down!!" />
+            <button for="moreStuff" type="submit" class="moreBtn">Submit</button>
+
+        </form>
+            
+        <ul class="todoList" for="tasks">
+            <li class="tasks" for="tasks">Get ready for the day! 
+                <button type="checkbox" class="finishTask"> Done </button>
+            </li>
+            <li class="tasks">Make coffee! 
+                <button type="checkbox" class="finishTask"> Done </button>
+            </li>
+            <li class="tasks">Slay the day! 
+                <button type="checkbox" class="finishTask"> Done </button>
+            </li>
+        </ul>
+        <button class="altDelete">DESTROY THE TASKS!</button>
+
+<script src="darkmode.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+:root {
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    border: 8px solid black;
+    color: darkturquoise;
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+  }
+  
+  .toggle-switch {
+    position: absolute;
+    width: 200px;
+    bottom: 150px;
+    left: 50px;
+  }
+  
+  label {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  input {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: inset 28px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider::before {
+    transform: translateX(95px);
+    background-color: var(--dark);
+    box-shadow: none;
+  }
+
+  .dark {
+    background-color: darkslategrey;
+    color: navajowhite;
+  }
+
+ h1 {
+    position: absolute;
+    bottom: 520px;
+    font-size: 5em;
+    
+ }
+
+ .tasks {
+    position: relative;
+    left: -7px;
+    font-size: 20px;
+    top: -5px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+ }
+
+ button {
+    border-radius: 8px;
+    color: aliceblue;
+    background-color: mediumpurple;
+    width: 60px;
+    
+ }
+
+ .moreTasks {
+    display: inline-block;
+    position: relative;
+    left: -150px;
+    width: 285px;
+    
+ }
+
+ .moreTasks:hover {
+    background-color: rgb(153, 132, 194);
+ }
+
+.moreBtn {
+    position: absolute;
+    left: 200px;
+    bottom: 333px;
+}
+
+.altDelete {
+    position: relative;
+    bottom: -300px;
+    left: 75px;
+    width: fit-content;
+    background-color: red;
+    border: 4px solid black;
+    font-size: 2em;
+    height: 80px;
+}
+/* 
+.altDelete:hover {
+    border
+} */
+
+.saveTodos {
+    display: inline-block;
+    position: relative;
+    top: 300px;
+    left: 275px;
+    background-color: lightgreen;
+    border: 4px solid green;
+    font-size: 2em;
+    height: 80px;
+    width: 120px;
+}
